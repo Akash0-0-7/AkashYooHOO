@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Creative Professional</title>
+   <link rel="stylesheet" href="Akash.css">
+</head>
+<body>
+    <div class="matrix-container" style="width:100%; height:100vh; min-width:1200px; min-height:800px; max-width:100vw; max-height:100vh; position:absolute; top:0; right:0; overflow:hidden; clip-path:polygon(40% 0%, 100% 0%, 100% 100%); background:rgb(15, 23, 42);">
+        <div class="matrix-rain" id="matrixRain" style="width:100%; height:100%; min-width:1200px; min-height:800px;"></div>
+    </div>
+    <script src="Akash.js"></script>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+
+            
+            <a href="#" class="logo" onclick="scrollToSection('home')">&lt;/&gt;codewithAkash </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link" onclick="scrollToSection('home')">Home</a></li>
+                <li><a href="#about" class="nav-link" onclick="scrollToSection('about')">About Me</a></li>
+                <li><a href="#my-work" class="nav-link" onclick="scrollToSection('my-work')">My Work</a></li>
+                <li><a href="#skills" class="nav-link" onclick="scrollToSection('skills')">Skills</a></li>
+                <li><a href="#services" class="nav-link" onclick="scrollToSection('services')">Services</a></li>
+                <li><a href="#contact" class="nav-link" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+  
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="hero-content">
+            <h1>Hellow<span class="animated-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </span><br><h2>I'm Akash Deogharia</h2> <h3> < Frontend Developer ></h3></h1>
+            <p class="hero-text">
+                I'm a passionate creative professional specializing in digital experiences that blend 
+                innovative design with cutting-edge technology. Let's create something extraordinary together.
+            </p>
+            <a href="#my-work" class="cta-button" onclick="scrollToSection('my-work')">View My Work</a>
+        </div>
+        <div class="hero-image-container" style="align-items: flex-start;">
+            <div class="profile-image-wrapper" onmouseenter="profileImageHover(true)" onmouseleave="profileImageHover(false)">
+                <span class="profile-border main"></span>
+                <span class="profile-border animated1"></span>
+                <span class="profile-border animated2"></span>
+                <span class="profile-border animated3"></span>
+                <img src="new .jpg" alt="Akash Deogharia - Frontend Developer" class="profile-image">
+                <div class="profile-floating-card top"><span class="icon">⚡</span>Frontend Developer</div>
+                <div class="profile-floating-card right" style="top: 55%; right: -170px; left: auto; transform: translateY(-50%) scale(1);"><span class="icon">🎨</span>UI/UX Design</div>
+                <div class="profile-floating-card left"><span class="icon">🚀</span>Innovation Focused</div>
+                <div class="profile-floating-card bottom"><span class="icon">💡</span>Creative Thinker</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    With over 5 years of experience in design and development, I specialize
+                <p>
+                    I believe in the power of minimalism and thoughtful design decisions. Every project 
+                    is an opportunity to solve problems creatively while delivering exceptional user 
+                    experiences that make a lasting impact.
+                </p>
+                <p>
+                    When I'm not crafting digital experiences, you'll find me exploring new technologies, 
+                    sketching ideas, or collaborating with fellow creatives to push the boundaries of 
+                    what's possible.
+                </p>
+            </div>
+            <div class="about-image" style="background: none; border: none; box-shadow: none;">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="akash.jpg" alt="Akash Front">
+              </div>
+              <div class="flip-card-back">
+                <img src="akash.jpg" alt="Akash Back">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="my-work" class="section">
+        <h2>My Work</h2>
+        <div class="portfolio-grid">
+            
+           
+            <div class="portfolio-item" onclick="showProjectDetails('Learning Management System')">
+                <div class="portfolio-overlay">
+                    <h3>Learning Management System</h3>
+                    <p>Educational platform with interactive content and progress tracking</p>
+                </div>
+            </div>
+            <div class="portfolio-item" onclick="showProjectDetails('Real Estate Platform')">
+                <div class="portfolio-overlay">
+                    <h3>Real Estate Platform</h3>
+                    <p>Property search and virtual tour experience with AR integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Design & Tools</h3>
+                <div class="skill-list2">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card" onclick="showServiceDetails('UI/UX Design')">
+                <div class="service-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive and visually stunning user interfaces that enhance user experience and drive engagement through thoughtful design decisions.</p>
+            </div>
+
+            <div class="service-card" onclick="showServiceDetails('Web Development')">
+                <div class="service-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Building responsive, performant websites and web applications using modern technologies and best practices for optimal user experience.</p>
+            </div>
+
+            <div class="service-card" onclick="showServiceDetails('Mobile App Design')">
+                <div class="service-icon">📱</div>
+                <h3>Mobile App Design</h3>
+                <p>Designing native and cross-platform mobile applications with focus on usability, accessibility, and platform-specific guidelines.</p>
+            </div>
+
+            <div class="service-card" onclick="showServiceDetails('Brand Identity')">
+                <div class="service-icon">🚀</div>
+                <h3>Brand Identity</h3>
+                <p>Developing comprehensive brand identities including logos, color schemes, typography, and visual guidelines that reflect your brand values.</p>
+            </div>
+
+            <div class="service-card" onclick="showServiceDetails('Performance Optimization')">
+                <div class="service-icon">⚡</div>
+                <h3>Performance Optimization</h3>
+                <p>Optimizing websites and applications for speed, SEO, and user experience through technical improvements and best practices.</p>
+            </div>
+
+            <div class="service-card" onclick="showServiceDetails('Consulting')">
+                <div class="service-icon">🎯</div>
+                <h3>Consulting</h3>
+                <p>Providing strategic guidance on digital transformation, user experience improvements, and technology decisions to drive business growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="subject" placeholder="Subject" required>
+                <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            
+            <div class="contact-info">
+                <div class="contact-description">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm always excited to collaborate on new projects and help bring creative visions to life. 
+                        Whether you need a complete digital solution or want to discuss your ideas, I'm here to help. 
+                        Feel free to reach out through the form or contact me directly using the information below.
+                    </p>
+                </div>
+                
+                <div class="contact-item" onclick="copyToClipboard('deoghariaakash1@gmail.com')">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>deoghariaakash1@google.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item" onclick="copyToClipboard('+91 6295629771')">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 6295629771</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+        <!-- Mobile menu toggle -->
+
+
+
+</body>
+</html>
